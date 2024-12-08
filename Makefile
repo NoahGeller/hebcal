@@ -1,6 +1,6 @@
 BINARY_NAME=hebcal
 MAN1_NAME=$(BINARY_NAME).1
-PREFIX=/usr/bin
+PREFIX=/usr
 MANDIR=/share/man
 DEFAULT_CITY="New York"
 
