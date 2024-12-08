@@ -31,12 +31,12 @@ $(MAN1_NAME): $(MAN1_NAME).in version.go
 
 .PHONY: install
 install: $(BINARY_NAME) $(MAN1_NAME)
-	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	install -s $(BINARY_NAME) $(DESTDIR)$(PREFIX)/bin/$(BINARY_NAME)
-	mkdir -p $(DESTDIR)$(PREFIX)$(MANDIR)/man1
-	cp $(MAN1_NAME) $(DESTDIR)$(PREFIX)$(MANDIR)/man1/$(MAN1_NAME)
+	mkdir -p $(D)$(PREFIX)/bin
+	install -s $(BINARY_NAME) $(D)$(PREFIX)/bin/$(BINARY_NAME)
+	mkdir -p $(D)$(PREFIX)$(MANDIR)/man1
+	cp $(MAN1_NAME) $(D)$(PREFIX)$(MANDIR)/man1/$(MAN1_NAME)
 
 .PHONY: uninstall
 uninstall:
-	rm -f $(DESTDIR)$(PREFIX)/bin/$(BINARY_NAME)
-	rm -f $(DESTDIR)$(PREFIX)$(MANDIR)/man1/$(MAN1_NAME)
+	rm -f $(D)$(PREFIX)/bin/$(BINARY_NAME)
+	rm -f $(D)$(PREFIX)$(MANDIR)/man1/$(MAN1_NAME)
